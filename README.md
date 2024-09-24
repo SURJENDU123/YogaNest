@@ -1,2 +1,0 @@
-# YogaNest
-Group Project
