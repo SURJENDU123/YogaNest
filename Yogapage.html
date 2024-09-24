@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Yogapage.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+     <header>
+        <h1><b>YogaNest</b></h1>
+    </header>
+    <nav>
+        <div class="nav-links">
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#pricing">Membership Plans</a>
+            <a href="#contact">Contact</a>
+            <a href="Gympage.html">Gym</a>
+        </div>
+
+        <div class="container">
+            <input type="text" placeholder="Search...">
+            <button id="Serch-btn">Search</button>
+            <button><i class="ph-bold ph-x"></i></button>
+        </div>
+        <button class="btn" id="loginBtn"><img src="icon.jpg" height="20px" width="20px"><a href="login.html"></a></button>
+    </nav>
+     <!-- This is the Starting point of login Page -->
+    <section class="hero">
+        <h1>Welcome to the Ultimate Fitness Experience</h1>
+    </section>
+
+    <div class="container">
+        <section class="about" id="about">
+            <h2>About Us</h2>
+            <p>We are a state-of-the-art fitness center that provides top-notch facilities and certified trainers to help you achieve your fitness goals. Whether you're a beginner or a seasoned athlete, we have everything you need to succeed.</p>
+        </section>
+
+        <section class="services" id="services">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service">
+                    <h3>Personal Training</h3>
+                    <p>Get one-on-one training sessions with certified trainers who will create a customized fitness plan tailored to your needs.</p>
+                </div>
+                <div class="service">
+                    <h3>Group Classes</h3>
+                    <p>Join our group fitness classes, including Yoga, Zumba, Pilates, and more, for a fun and energetic workout experience.</p>
+                </div>
+                <div class="service">
+                    <h3>Nutrition Counseling</h3>
+                    <p>Meet with our nutrition experts to develop a healthy eating plan that complements your fitness journey.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Membership Pricing Section -->
+        <section class="pricing" id="pricing">
+            <h2>Membership Plans</h2>
+            <div class="pricing-table">
+                <div class="plan">
+                    <h3>Basic Plan</h3>
+                    <p>Access to gym equipment</p>
+                    <p>1 free training session</p>
+                    <p class="price">1 month: $20</p>
+                    <p class="price">6 months: $100</p>
+                    <p class="price">12 months: $180</p>
+                </div>
+                <div class="plan">
+                    <h3>Standard Plan</h3>
+                    <p>Access to gym equipment</p>
+                    <p>5 training sessions</p>
+                    <p>Free group classes</p>
+                    <p class="price">1 month: $50</p>
+                    <p class="price">6 months: $250</p>
+                    <p class="price">12 months: $450</p>
+                </div>
+                <div class="plan">
+                    <h3>Premium Plan</h3>
+                    <p>Access to gym equipment</p>
+                    <p>Unlimited training sessions</p>
+                    <p>Personalized diet plan</p>
+                    <p>Access to all classes</p>
+                    <p class="price">1 month: $100</p>
+                    <p class="price">6 months: $550</p>
+                    <p class="price">12 months: $1000</p>
+                </div>
+            </div>
+        </section>
+        <section id="login">
+            <h2>Login</h2>
+            <p>This section can include a form for logging in with username and password (to be implemented).</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Gym Center | Designed by Your Name</p>
+    </footer>
+    </div>
+
+   
+            </div>
+        </div>
+        </div>
+     <!-- This is the Ending Point of Login Page -->
+    <script>
+    
+    var x=document.getElementById("login");
+        var y=document.getElementById("register");
+        var z=document.getElementById("btn");
+    
+    
+        function register(){
+            x.style.left="-500px";
+            y.style.left="50px";
+            z.style.left="110px";
+        }
+        function login(){
+            x.style.left="50px";
+            y.style.left="450px";
+            z.style.left="0px";
+        }
+    
+        var modal = document.getElementById('modal');
+        var btn = document.getElementById('loginBtn');
+        var span = document.getElementsByClassName('close')[0];
+        btn.onclick = function() 
+        {
+       modal.style.display = 'block';
+        }
+       span.onclick = function() 
+       {
+       modal.style.display = 'none';
+        }
+       window.onclick = function(event) 
+       {
+       if (event.target == modal)
+        {
+       modal.style.display = 'none';
+        }
+       }
+    </script>
+    </body>
+    </html>
