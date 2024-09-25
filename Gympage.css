@@ -11,18 +11,62 @@
             color: white;
             padding: 10px 0;
             text-align: center;
+            position: relative;
+            top: 0px;
+            height: 130px;
         }
+        header h1{
+          position: relative;
+          top: 60px;
+        }
+
+        /* Icon CSS */
+        .fa {
+          padding: 10px;
+          font-size: 20px;
+          width: 20px;
+          text-align: center;
+          text-decoration: none;
+          margin: 5px 2px;
+          border-radius: 50%;
+          position:relative;
+          left: 670px;
+          z-index: 1;
+          display: flex;
+          justify-content: space-between;
+        }
+        
+        .fa:hover {
+            opacity: 0.7;
+            box-shadow: 3px 2px 5px 3px white, -3px -2px 5px 3px white;
+        }
+        
+        .fa-facebook {
+          background: #3B5998;
+          color: white;
+        }
+        
+        .fa-youtube {
+          background: #bb0000;
+          color: white;
+        }
+        
+        .fa-instagram {
+          background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+          color: white;
+        }
+        /* Icons End */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             background-color: transparent;
-            backdrop-filter: blur(60px);
+            backdrop-filter: blur(30px);
             padding: 0 20px;
             height: 80px;
-            width: 1470px;
+            width: 1480px;
             position: fixed;
-            top: 80px;
+            top: 0px;
             z-index: 2;
         }
         nav .nav-links {
@@ -63,18 +107,20 @@
         /* Login Button */
         .btn{
             display: inline-block;
-            height: 40px;
-            width: 80px;
+            height: 30px;
+            width: 50px;
             background-color: transparent;
             color: #181717;
             font-size: 16px;
             cursor: pointer;
-            border-radius: 60px;
-            border: 1px solid white;
+            background-image: url(icon.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-left: 10px;
         }
         .btn:focus{
             height: 40px;
-            width: 100px;
+            width: 30px;
             margin-left: 20px;
             background-color: transparent;
             border-radius: 4px;
@@ -93,6 +139,8 @@
             border: 1px solid white;
             background-color: #0ee668;
             box-shadow: 2px 2px 5px 3px rgba(255,255,255,0.5),-2px -2px 5px 3px rgba(255,255,255,0.5);
+            padding: 0;
+            margin: 0;
         }
         /* Hero Section */
         .hero {
@@ -183,8 +231,8 @@
         /* Flip Animation */
         .flip-card1 {
             background-color: transparent;
-            width: 300px;
-            height: 330px;
+            width: 260px;
+            height: 350px;
             border: 1px solid #f1f1f1;
             perspective: 1000px; 
             /* Remove this if you don't want the 3D effect */
@@ -231,8 +279,8 @@
            /* Flip Animation */
         .flip-card2 {
             background-color: transparent;
-            width: 300px;
-            height: 330px;
+            width: 260px;
+            height: 350px;
             border: 1px solid #f1f1f1;
             perspective: 1000px;
             z-index: 2; /* Remove this if you don't want the 3D effect */
@@ -278,8 +326,8 @@
            /* Flip Animation */
         .flip-card3 {
             background-color: transparent;
-            width: 300px;
-            height: 330px;
+            width: 260px;
+            height: 350px;
             border: 1px solid #f1f1f1;
             perspective: 1000px;
             z-index: 3; /* Remove this if you don't want the 3D effect */
@@ -321,5 +369,6 @@
             color:  rgb(28, 198, 217);
             transform: rotateY(180deg);
           }
-          /* Flip animation */
+          /* Starting of Social Icons Css */
+          
           
