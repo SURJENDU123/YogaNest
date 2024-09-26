@@ -5,6 +5,12 @@
             padding: 0;
             background-color: #f4f4f4;
             scroll-behavior: smooth; /* Smooth scrolling */
+            background-image: url(GymBackground.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            backdrop-filter: blur(10px);
+            z-index:-3 ; 
         }
         header {
             background-color: #333;
@@ -13,13 +19,17 @@
             text-align: center;
             position: relative;
             top: 0px;
-            height: 130px;
+            height: 60px;
         }
         header h1{
           position: relative;
-          top: 60px;
+          bottom: 10px;
         }
-
+        #header1{
+          position: absolute;
+          bottom: 15px;
+          left: 680px;
+        }
         /* Icon CSS */
         .fa {
           padding: 10px;
@@ -63,11 +73,11 @@
             background-color: transparent;
             backdrop-filter: blur(30px);
             padding: 0 20px;
-            height: 80px;
-            width: 1480px;
-            position: fixed;
+            height: 75px;
+            width: 1470px;
+            position: sticky;
             top: 0px;
-            z-index: 2;
+            z-index: 5;
         }
         nav .nav-links {
             display: flexbox;
@@ -104,19 +114,87 @@
         nav button:hover {
             background-color: #0ee668;
         }
+        /* Search bar Animation */
+        .search-btn, .close-btn {
+          width: 40px;
+          height: 40px;
+          font-size: 25px;
+          background-color: #1c1c1c;
+          color: white;
+          border: none;
+          cursor: pointer;
+          position: absolute;
+          transition: all 0.25s ease;
+        }
+        .search-btn:hover{
+          background-color: black;
+        }
+        
+        .close-btn {
+          color: rgb(255, 83, 26);
+          z-index: -1;
+        }
+        
+        .search-box {
+          width: 40px;
+          height: 40px;
+          padding: 15px;
+          /* border-radius: 25px; */
+          background-color: black;
+          color: white;
+          outline: none;
+          border: none;
+          transition: width 0.25s ease;
+        }
+        
+        .search {
+          display: flex;
+          align-items: center;
+        }
+        
+        .active .search-box {
+          width: 250px;
+        }
+        
+        .active .search-btn {
+          transform: translate(210px, 2px) scale(0.8);
+          background-color: transparent;
+        }
+        
+        .active .close-btn {
+          z-index: 0;
+          transform: translate(250px, 2px);
+        }
+          
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+  }
+        /* search Bar End */
+
         /* Login Button */
+        #icon1{
+          height: 30px;
+          width: 50px;
+          background-image: url(icon.jpg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          position: relative;
+          bottom: 12px;
+          left: 15px;
+        }
         .btn{
             display: inline-block;
-            height: 30px;
-            width: 50px;
+            height: 40px;
+            width: 60px;
             background-color: transparent;
             color: #181717;
             font-size: 16px;
             cursor: pointer;
-            background-image: url(icon.jpg);
-            background-repeat: no-repeat;
-            background-size: contain;
-            margin-left: 10px;
+            border: 1px solid black;
+            border-radius: 60px;
+            
         }
         .btn:focus{
             height: 40px;
@@ -133,15 +211,19 @@
             border-radius: 60px;
         }
         .btn:hover
-        {
-            border: 1px solid black;
-            border-radius: 60px 60px 60px 60px;
-            border: 1px solid white;
-            background-color: #0ee668;
-            box-shadow: 2px 2px 5px 3px rgba(255,255,255,0.5),-2px -2px 5px 3px rgba(255,255,255,0.5);
-            padding: 0;
-            margin: 0;
+        {   
+          display: inline-block;
+          height: 40px;
+          width: 60px;
+          color: #181717;
+          font-size: 16px;
+          cursor: pointer;
+          filter: drop-shadow(1px 1px 15px #0ee668);
+          box-shadow: 2px 2px 5px 3px white,-2px -2px 5px 3px white;
+          border: 1px solid black;
+          border-radius: 60px;
         }
+      
         /* Hero Section */
         .hero {
             background: url('pic2.jpg') no-repeat center center/cover;
@@ -220,7 +302,7 @@
         .price {
             font-size: 22px;
             font-weight: bold;
-            color: #FFD700;
+            color: whitesmoke;
         }
         footer {
             background-color: #333;
@@ -233,8 +315,8 @@
             background-color: transparent;
             width: 260px;
             height: 350px;
-            border: 1px solid #f1f1f1;
             perspective: 1000px; 
+            border-radius: 60px;
             /* Remove this if you don't want the 3D effect */
           }
           
@@ -246,11 +328,14 @@
             text-align: center;
             transition: transform 0.8s;
             transform-style: preserve-3d;
+            border-radius: 60px;
           }
           
           /* Do an horizontal flip when you move the mouse over the flip box container */
           .flip-card1:hover .flip-card-inner1 {
             transform: rotateY(180deg);
+            box-shadow: 3px 3px 20px 1px rgb(69, 69, 80),-3px -3px 20px 1px rgb(69,69,80);
+
           }
           
           /* Position the front and back side */
@@ -266,13 +351,16 @@
           .flip-card-front1 {
             background-color: #bbb;
             color: black;
+            border-radius: 60px;
           }
           
           /* Style the back side */
           .flip-card-back1 {
-            background-color: white;
-            color:  rgb(28, 198, 217);
+            background-color: purple;
+            color:  whitesmoke;
             transform: rotateY(180deg);
+            border-radius: 60px;
+           
           }
           
           /* .............. */
@@ -281,9 +369,9 @@
             background-color: transparent;
             width: 260px;
             height: 350px;
-            border: 1px solid #f1f1f1;
             perspective: 1000px;
-            z-index: 2; /* Remove this if you don't want the 3D effect */
+            z-index: 2;
+            border-radius: 60px; /* Remove this if you don't want the 3D effect */
           }
           
           /* This container is needed to position the front and back side */
@@ -294,11 +382,13 @@
             text-align: center;
             transition: transform 0.8s;
             transform-style: preserve-3d;
+            border-radius: 60px;
           }
           
           /* Do an horizontal flip when you move the mouse over the flip box container */
           .flip-card2:hover .flip-card-inner2 {
             transform: rotateY(180deg);
+            box-shadow: 3px 3px 20px 1px rgb(69, 69, 80),-3px -3px 20px 1px rgb(69,69,80)
           }
           
           /* Position the front and back side */
@@ -314,13 +404,15 @@
           .flip-card-front2 {
             background-color: #bbb;
             color: black;
+            border-radius: 60px;
           }
           
           /* Style the back side */
           .flip-card-back2 {
-            background-color: white;
-            color: rgb(28, 198, 217);
+            background-color: purple;
+            color: whitesmoke;
             transform: rotateY(180deg);
+            border-radius: 60px;
           }
           /* ................ */
            /* Flip Animation */
@@ -328,9 +420,9 @@
             background-color: transparent;
             width: 260px;
             height: 350px;
-            border: 1px solid #f1f1f1;
             perspective: 1000px;
-            z-index: 3; /* Remove this if you don't want the 3D effect */
+            z-index: 3;
+            border-radius: 60px; /* Remove this if you don't want the 3D effect */
           }
           
           /* This container is needed to position the front and back side */
@@ -341,11 +433,13 @@
             text-align: center;
             transition: transform 0.8s;
             transform-style: preserve-3d;
+            border-radius: 60px;
           }
           
           /* Do an horizontal flip when you move the mouse over the flip box container */
           .flip-card3:hover .flip-card-inner3 {
             transform: rotateY(180deg);
+            box-shadow: 3px 3px 20px 1px rgb(69, 69, 80),-3px -3px 20px 1px rgb(69,69,80)
           }
           
           /* Position the front and back side */
@@ -361,14 +455,17 @@
           .flip-card-front3 {
             background-color: #bbb;
             color: black;
+            border-radius: 60px;
           }
           
           /* Style the back side */
           .flip-card-back3 {
-            background-color: white;
-            color:  rgb(28, 198, 217);
+            background-color: purple;
+            color:  whitesmoke;
             transform: rotateY(180deg);
+            border-radius: 60px;
           }
           /* Starting of Social Icons Css */
+          /* About us section */
           
           
