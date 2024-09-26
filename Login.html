@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <h1><b>YogaNest</b></h1>
+    </header>
+        <div class="section">
+            <div class="form-box">
+                <div class="button_box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="login()" id="Login_page">Log in</button>
+                    <button type="button" class="toggle-btn" onclick="register()">Register</button> 
+                </div>
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="password" class="input-field" placeholder=" Enter Password" required>
+                <input type="checkbox" class="check_box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn"><a href="Gympage.html">Log in</a></button>
+            </form>
+            <form id="register" class="input-group">
+                <input type="text" name="Name" id="Name1"  class="input-field" placeholder="Enter Your Name" required>
+
+                <input type="email" name="emai" id="email" class="input-field" placeholder="Enter Your Valid Email" required>
+
+                <input type="tel" name="Number" id="Number1"  class="input-field" placeholder="Enter Your Phone Number" required>
+
+
+                <input type="password" name="text" id="Password2" class="input-field" placeholder="Set A New Password" required>
+                
+                <input type="checkbox" class="check_box" required><span>I agree to this terms & condition</span>
+
+                <button type="submit" class="submit-btn"><a href="#login">Register</a></button>
+            </form>
+            </div>
+        </div>
+
+<script>
+    var x=document.getElementById("login");
+    var y=document.getElementById("register");
+    var z=document.getElementById("btn");
+
+
+    function register(){
+        x.style.left="-500px";
+        y.style.left="50px";
+        z.style.left="110px";
+    }
+    function login(){
+        x.style.left="50px";
+        y.style.left="450px";
+        z.style.left="0px";
+    }
+
+//     var modal = document.getElementById('modal');
+//     var btn = document.getElementById('loginBtn');
+//     var span = document.getElementsByClassName('close')[0];
+//     btn.onclick = function() 
+//     {
+//    modal.style.display = 'block';
+//     }
+//    span.onclick = function() 
+//    {
+//    modal.style.display = 'none';
+//     }
+//    window.onclick = function(event) 
+//    {
+//    if (event.target == modal)
+//     {
+//    modal.style.display = 'none';
+//     }
+//    }
+</script>
+
+</body>
+</html>
